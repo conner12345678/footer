@@ -1,0 +1,54 @@
+body{
+    background-color: white;
+    padding: 10vw;
+}
+.ftr{
+    display: grid;
+    width: 80vw;
+    height: 20vw;
+    background-color: black;
+    padding: 30px;
+    border-radius: 10px;
+    grid-template-areas: 
+    "header"
+    "theLinks"
+    "line"
+    "text";
+    .lgo{
+        width: 5vw;
+        height: 5vw;
+        grid-area: header;
+        place-self: center;
+        &:hover{
+            animation: skewer 3s;
+        }
+    }
+    .about{
+        color: white;
+        grid-area: text;
+        place-self: center;
+    }
+    .links{
+        color: blue;
+        font-size: 2vw;
+        grid-area: theLinks;
+        place-self: center;
+        &:hover{
+            color: purple;
+        }
+    }
+    .line{
+        grid-area: line;
+        place-self: center;
+        width: 50vw;
+    }
+}
+
+@keyframes skewer {
+    from{
+        transform: skewY(0deg);
+    }
+    to{
+        transform: skewY(180deg);
+    }
+}
